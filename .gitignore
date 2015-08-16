@@ -1,11 +1,8 @@
+# =========================
+# Repo specific
+# =========================
 .*
 build.sbt
-#lib_managed/**
-#submission/**
-
-# =========================
-# Temp specific
-# =========================
 Assignments/*/lib/
 Assignments/*/project/
 Assignments/*/src/main/scala/common/
@@ -13,7 +10,6 @@ Assignments/*/src/main/scala/common/
 # =========================
 # Language/tools specific
 # =========================
-
 # Scala specific
 *.class
 *.log
@@ -34,7 +30,8 @@ project/plugins/project/
 .worksheet
 
 # =========================
-
+# Windows specific
+# =========================
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
