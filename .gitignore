@@ -6,7 +6,7 @@ build.sbt
 # =========================
 # Temp specific
 # =========================
-Assignments/*/project/
+Assignments/*/lib/
 Assignments/*/project/
 Assignments/*/src/main/scala/common/
 
