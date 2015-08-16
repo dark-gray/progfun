@@ -1,11 +1,11 @@
 .*
-!.gitignore
-build.sbt
-lib_managed/**
-src/main/scala/common/**
-project/**
-submission/**
-target/**
+#!.gitignore
+#build.sbt
+#lib_managed/**
+#src/main/scala/common/**
+#project/**
+#submission/**
+#target/**
 
 # =========================
 
