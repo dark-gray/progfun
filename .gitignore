@@ -1,12 +1,37 @@
-#.*
-#!.gitignore
-#build.sbt
+.*
+build.sbt
 #lib_managed/**
-#src/main/scala/common/**
-#project/**
 #submission/**
-#target/**
 
+# =========================
+# Temp specific
+# =========================
+Assignments/*/project/
+Assignments/*/project/
+Assignments/*/src/main/scala/common/
+
+# =========================
+# Language/tools specific
+# =========================
+
+# Scala specific
+*.class
+*.log
+
+# sbt specific
+.cache
+.history
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
 
 # =========================
 
