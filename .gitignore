@@ -7,6 +7,10 @@
 #submission/**
 #target/**
 
+.gitignore
+.gitattributes
+
+
 # =========================
 
 # Windows image file caches
