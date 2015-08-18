@@ -22,10 +22,24 @@ object Main {
   /**
    * Exercise 2
    */
-  def balance(chars: List[Char]): Boolean = ???
+  def balance(chars: List[Char]): Boolean = {
+    def loop(chars: List[Char], count: Int): Int = {
+      if(count < 0 || chars.isEmpty) count
+      else if(chars.head == '(') loop(chars.tail, count + 1)
+      else if(chars.head == ')') loop(chars.tail, count - 1)
+      else loop(chars.tail, count)
+    }
+
+    loop(chars, 0) == 0
+  }
 
   /**
    * Exercise 3
    */
-  def countChange(money: Int, coins: List[Int]): Int = ???
+  def countChange(money: Int, coins: List[Int]): Int = {
+    if (money == 0) 1
+    else if (money < 0 || coins.isEmpty) 0
+    else countChange(money - coins.head, coins) + countChange(money, coins.tail)
+  }
+  
 }
