@@ -1,4 +1,4 @@
-При попытке запустить тесты (right-click the file in eclipse and chose "Run As" - "JUnit Test") получаем следующие сообщения об ошибках:
+РџСЂРё РїРѕРїС‹С‚РєРµ Р·Р°РїСѓСЃС‚РёС‚СЊ С‚РµСЃС‚С‹ (right-click the file in eclipse and chose "Run As" - "JUnit Test") РїРѕР»СѓС‡Р°РµРј СЃР»РµРґСѓСЋС‰РёРµ СЃРѕРѕР±С‰РµРЅРёСЏ РѕР± РѕС€РёР±РєР°С…:
 
 java.lang.NoClassDefFoundError: scala/xml/MetaData
 	at org.scalatest.Suite$.reportTestStarting(Suite.scala:2054)
