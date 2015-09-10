@@ -86,7 +86,7 @@ class FunSetSuite extends FunSuite {
    * Once you finish your implementation of "singletonSet", exchange the
    * function "ignore" by "test".
    */
-  ignore("singletonSet(1) contains 1") {
+  test("singletonSet contains its own element") {
     
     /**
      * We create a new instance of the "TestSets" trait, this gives us access
@@ -97,16 +97,48 @@ class FunSetSuite extends FunSuite {
        * The string argument of "assert" is a message that is printed in case
        * the test fails. This helps identifying which assertion failed.
        */
-      assert(contains(s1, 1), "Singleton")
+      assert(contains(s1, 1),  "1 is in singleton set of 2")
+      assert(contains(s2, 2),  "2 is in singleton set of 2")
+      assert(contains(s3, 3),  "3 is in singleton set of 3")
+      assert(!contains(s3, 1), "1 is not in singleton set of 3")
     }
   }
 
-  ignore("union contains all elements") {
+  test("union contains all elements") {
     new TestSets {
       val s = union(s1, s2)
-      assert(contains(s, 1), "Union 1")
-      assert(contains(s, 2), "Union 2")
-      assert(!contains(s, 3), "Union 3")
+      assert(contains(s, 1),  "1 is in a union of 1 and 2")
+      assert(contains(s, 2),  "2 is in a union of 1 and 2")
+      assert(!contains(s, 3), "3 is not in a union of 1 and 2")
     }
   }
+  
+  test("intersect contains valid elements") {
+    new TestSets {
+      val u1 = union(s1, s2)
+      val u2 = union(s2, s3)
+      val i1 = intersect(s1, s2)
+      val i2 = intersect(u1, u2)
+      val i3 = intersect(s1, u1)
+      assert(!contains(i1, 1), "1 is not in an intersect of 1 and 2")
+      assert(contains(i2, 2),  "2 is in an intersect of 1,2 and 2,3")
+      assert(contains(i3, 1),  "1 is in an intersect of 1 and 1,2")
+    }
+  }
+    
+  test("filter tests") {
+    new TestSets {
+      def p1: Set = x => (x % 2 == 0) // чётные
+      def p2: Set = x => (x % 2 != 0) // нечётные
+      val f1 = filter(s1, p1)
+      val f2 = filter(s1, p2)
+      val f3 = filter(s2, p1)
+      val f4 = filter(s2, p2)
+      assert(!contains(f1, 1), "1 is not in a set of 1 filtered by even numbers")
+      assert(contains(f2, 1),  "1 is in a set of 1 filtered by odd numbers")
+      assert(contains(f3, 2),  "2 is in a set of 2 filtered by even numbers")
+      assert(!contains(f4, 2), "2 is not in a set of 2 filtered by odd numbers")
+    }
+  }
+  
 }
