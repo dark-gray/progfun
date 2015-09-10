@@ -26,6 +26,10 @@ object FunSets {
    * Returns the union of the two given sets,
    * the sets of all elements that are in either `s` or `t`.
    */
+  /**
+   * На одной строке с текущими реализациями методов находятся закомментированные альтернативные реализации, 
+   * работоспособность которых также проверена тестами из Tests.ws.
+   */
   def union(s: Set, t: Set): Set = (x: Int) => contains(s, x) || contains(t, x)     //x => s(x) || t(x)
 
   /**
