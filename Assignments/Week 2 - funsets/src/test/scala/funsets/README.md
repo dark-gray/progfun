@@ -1,3 +1,5 @@
+РЕШЕНИЕ: необходимо заново добавить все библиотеки (битые пути в настроёках проекта).
+
 При попытке запустить тесты (right-click the file in eclipse and chose "Run As" - "JUnit Test") получаем следующее сообщение об ошибках:
 
 java.lang.NoClassDefFoundError: scala/xml/MetaData
