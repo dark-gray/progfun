@@ -2,20 +2,20 @@
 # Repo specific
 # =========================
 #.*
-Assignments/*/.cache-main
-Assignments/*/.cache-tests
+#.cache-main
+#.cache-tests
 
 build.sbt
 Doc/
 
-Lectures/.settings
-Lectures/.worksheet
+Lectures/.settings/
+Lectures/.worksheet/
 Lectures/.cache-main
 Lectures/.gitignore
 
 Assignments/*/project/
 Assignments/*/src/main/scala/common/
-Assignments/*/.settings
+Assignments/*/.settings/
 Assignments/*/.cache-main
 Assignments/*/.cache-tests
 Assignments/*/.gitignore
