@@ -1,12 +1,26 @@
 # =========================
 # Repo specific
 # =========================
-.*
+#.*
+Assignments/*/.cache-main
+Assignments/*/.cache-tests
+
 build.sbt
 Doc/
-#Assignments/*/lib/
+
+Lectures/*/.settings
+Lectures/*/.worksheet
+Lectures/*/.cache-main
+Lectures/*/.gitignore
+
 Assignments/*/project/
 Assignments/*/src/main/scala/common/
+Assignments/*/.settings
+Assignments/*/.cache-main
+Assignments/*/.cache-tests
+Assignments/*/.gitignore
+#Assignments/*/.project
+Assignments/*/build.sbt
 
 # =========================
 # Language/tools specific
