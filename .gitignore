@@ -3,7 +3,8 @@
 # =========================
 .*
 build.sbt
-Assignments/*/lib/
+Doc/
+#Assignments/*/lib/
 Assignments/*/project/
 Assignments/*/src/main/scala/common/
 
