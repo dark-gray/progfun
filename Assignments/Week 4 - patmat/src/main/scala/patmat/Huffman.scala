@@ -73,14 +73,14 @@ object Huffman {
    *   }
    */
   def times(chars: List[Char]): List[(Char, Int)] = {
-    /** Оставил первые варианты решения для истории.
+    /** Оставил первый вариант решения для истории.
     // Вариант 1.
     def f(c: Char): Boolean = { c == chars.head }
     if (chars.isEmpty) List()
     else List((chars.head, chars.count(f))) ::: times(chars.filterNot(f))
     */
     
-    // Вариант 3.
+    // Вариант 2.
     chars match {
       case Nil => Nil
       case x :: xs => List((x, chars.count(_ == x))) ::: times(chars.filterNot(_ == x))
