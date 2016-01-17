@@ -16,6 +16,7 @@ Lectures/.gitignore
 Assignments/*/project/
 Assignments/*/src/main/scala/common/
 Assignments/*/.settings/
+!Assignments/Week 6 - forcomp/.settings/
 Assignments/*/.cache-main
 Assignments/*/.cache-tests
 Assignments/*/.gitignore
