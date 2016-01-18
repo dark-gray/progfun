@@ -2,19 +2,29 @@ package week1
 
 object Lecture_1_7 {
   println("Welcome to the lecture 1.7 worksheet") //> Welcome to the lecture 1.7 worksheet
-
+	
+	// Greatest common divisor.
+	def gcd (a: Int, b: Int): Int =
+		if (b == 0) a else gcd(b, a % b)  //> gcd: (a: Int, b: Int)Int
+	
+	gcd(14, 21)                               //> res0: Int = 7
+	
+//------------------------------------------------------------------------------
+	
   def factorial(n: Int): Int = {
 
-    def fact_iter(n: Int, acc: Int): Int = {
-      if (n == 0) acc else fact_iter(n - 1, acc * n)
+    def fact_iter(acc: Int, n: Int): Int = {
+      if (n == 0) acc else fact_iter(acc * n, n - 1)
     }
 
-    fact_iter(n, 1)
-  }                                               //> factorial: (n#230408: Int#1082)Int#1082
+    fact_iter(1, n)
+  }                                               //> factorial: (n: Int)Int
 
-  factorial(3)                                    //> res0: Int#1082 = 6
-  factorial(5)                                    //> res1: Int#1082 = 120
-  factorial(10)                                   //> res2: Int#1082 = 3628800
+  factorial(3)                                    //> res1: Int = 6
+  factorial(5)                                    //> res2: Int = 120
+  factorial(10)                                   //> res3: Int = 3628800
+
+//------------------------------------------------------------------------------
 
   def sum(f: Int => Int, a: Int, b: Int): Int = {
     def loop(a: Int, acc: Int): Int = {
@@ -22,7 +32,6 @@ object Lecture_1_7 {
       else loop(a + 1, f(a) + acc)
     }
     loop(a, 0)
-  }                                               //> sum: (f#230659: Int#1082 => Int#1082, a#230660: Int#1082, b#230661: Int#1082
-                                                  //| )Int#1082
+  }                                               //> sum: (f: Int => Int, a: Int, b: Int)Int
 
 }
