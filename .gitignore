@@ -14,13 +14,17 @@ Lectures/.cache-main
 Lectures/.gitignore
 
 Assignments/*/project/
+Assignments/*/src/main/resources/
 Assignments/*/src/main/scala/common/
 Assignments/*/.settings/
-!Assignments/Week 6 - forcomp/.settings/
 Assignments/*/.cache-main
 Assignments/*/.cache-tests
 Assignments/*/.gitignore
 Assignments/*/build.sbt
+
+!Assignments/Week 6 - forcomp/.settings/
+!Assignments/Week 6 - forcomp/src/main/scala/common/
+Assignments/Week 6 - forcomp/src/main/scala/forcomp/package.scala
 
 # =========================
 # Language/tools specific
