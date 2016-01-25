@@ -1,6 +1,7 @@
 package week3
 
 //import week3.Rational
+//import week3.{Rational, Hello}
 //import week3._
 
 object Lecture_3_2 {
